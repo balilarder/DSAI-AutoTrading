@@ -30,8 +30,6 @@ def create_table(open_price_moving, open_change, trend):
         data = open_price_moving[i:i+3]+open_change[i:i+2]
         feature.append(data)
         label.append(trend[i+2])
-    # print(feature)
-   
     return (feature, label)
 
 
