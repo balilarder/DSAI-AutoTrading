@@ -2,7 +2,7 @@ from sklearn import tree
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn import linear_model
+from sklearn.ensemble import AdaBoostClassifier
 
 import statistics
 std_boundary = 0
@@ -85,8 +85,10 @@ class Trader(object):
         # model = tree.DecisionTreeClassifier(random_state=0)
         # model = SVC()
         # model = KNeighborsClassifier()
-        model = RandomForestClassifier(random_state=0)
+        # model = RandomForestClassifier(random_state=0)
         # model = linear_model.LinearRegression()
+        model = AdaBoostClassifier(n_estimators=500)
+
         
         model = model.fit(feature, label)
 
