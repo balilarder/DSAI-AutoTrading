@@ -200,9 +200,6 @@ def load_data(file_name):
     return (open_price, high_price, low_price, close_price)
 
 
-
-
-
 if __name__ == '__main__':
     # You should not modify this part.
     import argparse
@@ -271,18 +268,15 @@ if __name__ == '__main__':
     actions = trader.predict_action(predict_trend)
     print("actions")
     print(actions, len(actions))
-    for a in actions:
-        print(a)
+    # for a in actions:
+    #     print(a)
 
     profit = trader.compute_profit(actions, open_price, close_price)
     print("profit")
     print(profit)
-    
-    # with open(args.output, 'w') as output_file:
-    #     for row in testing_data:
-    #         # We will perform your action as the open price in the next day.
-    #         action = trader.predict_action(datum)
-    #         output_file.write(action)
 
-    #         # this is your option, you can leave it empty.
-    #         trader.re_training(i)
+    # output file
+    with open(args.output, 'w') as output_file:
+        for a in actions:
+            output_file.write(str(a)+'\n')
+
