@@ -21,9 +21,13 @@ And the change rate(slope), which is use to predict the trend:
 
 * $\frac{MA10_{t-1}-MA10_{t-2}}{MA10_{t-2}}$
 
-The label shows the trend of tomorrow's MA to predict, and it has 5 classes:
+The label shows the trend of tomorrow's MA to predict, and it has 5 classes, the boundary of these classes is specified in the trader.py:
 * -2 means drop significantly
 * -1 means drop slightly
 * 0 means stable
 * 1 means grow slightly
 * 2 means grow significantly
+
+### Actions:
+Based on current state and the predicted label
+![](state.jpg)
