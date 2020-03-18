@@ -1,4 +1,4 @@
-# HW1-AutoTrading
+# DSAI-AutoTrading
 
   - A program that can decide to buy or sell the stock automatically for the future trend predicted by the model, learned by training_data.csv
   - Output: a sequence of actions(1 means to buy, 0 means to hold, and -1 means to sell the stock) for eachday
